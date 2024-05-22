@@ -552,6 +552,32 @@ test('fake timers', async () => {
 });
 ```
 
+If your time-based code is asynchronous, you can use `await jest.advanceTimersByTimeAsync()` to advance the time.
+
+For example, the following code
+```js
+class MyClass {
+  setResult() {
+    setTimeout(async (getNumberAsync) => {
+      this.result = await getNumberAsync()
+    }, 1000)
+  }
+}
+```
+could be tested using the following code
+```js
+test('async fake timer', () => {
+  myClass = new MyClass()
+  jest.useFakeTimers();
+  const getNumberAsync = jest.fn().mockResolvedValue(19);
+  myClass.setResult(getNumberAsync);
+
+  jest.advanceTimersByTimeAsync(1000);
+  expect(myClass.result).toBe(19);
+  jest.useRealTimers();
+})
+```
+
 ## Mocking fetch requests
 
 One common testing need is to isolate your execution from external calls such as making network fetch requests. To mock out the runtime's fetch function we can simply assign a mocked function to `global.fetch`. The following demonstrates how you can supply a switch statement to return mocked data based upon the requesting URL.
