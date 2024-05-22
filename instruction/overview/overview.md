@@ -8,10 +8,10 @@ This course covers everything necessary to successfully take an application from
 
 > _Source: [hubspot.com](https://blog.hubspot.com/website/what-is-devops)_
 
-Beyond the work necessary to build the actual application, there are two additional roles that are required to delivery the application to a customer.
+Beyond the work necessary to build the actual application, there are two additional roles that are required to deliver the application to a customer.
 
 1. **Quality Assurance (QA)** - Quality assurance provides an independent review of the application team's deliverables. Their job is to provide assurance that the application follows the design specification and is free from any critical issues that would harm the company or its customers.
-1. **Developer Operations (DevOps)** - DevOps provides the automated pipeline that takes the application team's deliverables and puts them into the hands of the customer. The term DevOps stems from the idea that the team is taking a developer mindset for deployment operations. In effect building an application for product delivery.
+1. **Developer Operations (DevOps)** - DevOps provides the automated pipeline that takes the application team's deliverables and puts them into the hands of the customer. The term DevOps stems from the idea that the team is taking a developer mindset for deployment operations, in effect building an application for product delivery.
 
 In a small company the application team will often assume the roles of QA and DevOps. However, the function of these teams is often more successful then they operate independently.
 
